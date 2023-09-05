@@ -15,49 +15,37 @@ should grow larger and wider proportionally.
 
 (You must solve this problem using only ONE public static final constant, not multiple constants; and its value must be used
 in the way described in this problem.)*/
-public class Window {
-public static final int R = 7;
-    
-	public static void main(String[] args) {
-        
-		System.out.print("+");
-		for(int i = 1; i <= 2; i++) {
-			for(int j = 1; j <= R; j++)
-				System.out.print("=");
-			System.out.print("+");
-		}
-			System.out.println();
-				for(int k = 1; k <= R; k++) { 
-				   for(int i = 1; i <= 3; i++) {
-					   System.out.print("|");
-					   for(int j = 1; j <= R; j++)
-					   System.out.print(" ");
-				   }
-				System.out.println();
-		}
-				System.out.print("+");
-				for(int i = 1; i <= 2; i++) {
-					for(int j = 1; j <= R; j++)
-						System.out.print("=");
-					System.out.print("+");
-				}
-				window();
-	}
-	public static void window() {
-			System.out.println();
-				for(int k = 1; k <= R; k++) { 
-				   for(int i = 1; i <= 3; i++) {
-					   System.out.print("|");
-					   for(int j = 1; j <= R; j++)
-					   System.out.print(" ");
-				   }
-				System.out.println();
-		}
-				System.out.print("+");
-				for(int i = 1; i <= 2; i++) {
-					for(int j = 1; j <= R; j++)
-						System.out.print("=");
-					System.out.print("+");
-	}
-	}
+public class Window {
+
+    public static final int size = 3;
+    public static void main(String[] args) {
+        
+
+        for (int i=1; i<=3; i++) {
+
+            for (int h=1; h<=3; h++) {
+                System.out.print("+");
+                if (h<3) {
+                    for (int u=1; u<=size; u++) {
+                        System.out.print("=");
+                    }
+                }
+            }
+            System.out.println();
+
+            if (i<3){
+                for (int o=1; o<=size;o++) {
+                    for (int j=1; j<=3; j++) { 
+                        System.out.print("|");
+                        if (j<3) {
+                            for (int k=1; k<=size; k++) {
+                                System.out.print(" ");
+                            }
+                        }
+                    }
+                    System.out.println();
+                }
+            }
+        }
+    }
 }
